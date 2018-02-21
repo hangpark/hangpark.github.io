@@ -1,6 +1,6 @@
 ---
 title: About Me
-permalink: /about
+permalink: /about/
 ---
 
 ## 보유기술
