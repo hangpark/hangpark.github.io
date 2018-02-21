@@ -128,8 +128,9 @@ permalink: /about
     * [MBC 시선집중, *IT기술, 질서정연한 평화집회에 기여했다*, 2016.11.28.](http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=214&aid=0000701962)
     * [한겨레, *앱으로 대오 찾고, 집회 출석체크…스마트시대 시위 풍경*, 2016.11.29.](http://www.hani.co.kr/arti/society/society_general/772425.html)
 
-<details closed>
-<summary>프로젝트 더 보기</summary>
+<details closed><summary>프로젝트 더 보기
+</summary>
+
 
 ### Connect People
 
@@ -197,7 +198,6 @@ permalink: /about
     * KAIST 학부 총학생회 중앙선거관리위원회 홈페이지 (Wordpress, PHP, MySQL)
     * KAIST 수리과학과 학생회장 선거 온라인 투표 시스템 (PHP, MySQL)
     * KAIST 학부 총학생회 규정집 (Django, Python)
-
 </details>
 
 ## 오픈소스 기여
