@@ -309,6 +309,11 @@ class Book(models.Model):
 
 물론 이 방식은 전혀 concrete하지 않는 방식이다.
 
+### 필드 커스터마이징
+
+이외에도 https://code.i-harness.com/en/q/53d1f9 이곳에 나와있는 방법을 따라 `IntegerField`나 `ForeignKey`를 직접 상속받아 커스텀 필드를 구현하는 방식 역시 존재한다. (테스트를 진행해보진 않았다.)
+
+
 ## 접근-2: ForeignKey 제약조건 비활성화
 
 위 방식은 기존 `ForeignKey` 구조와 너무 다른 API를 사용한다. 유지보수도 어렵고 쿼리셋과의 인테그레이션도 힘들다. 이를 보완하기 위해 데이터베이스 상 참조관계 제약조건을 없애는 전략을 변경해보자.
@@ -420,9 +425,9 @@ Traceback (most recent call last):
 django.db.utils.OperationalError: no such table: person_person
 ```
 
-효율적인 nested REST API를 작성하기 위해 필수적인 `select_related()`를 사용하기 위해 어떻게 하는 것이 좋을까. 두 가지 방법을 직접 구현해보았다.
+효율적인 nested REST API를 작성하기 위해 필수적인 `select_related()`를 사용하기 위해 어떻게 하는 것이 좋을까. 세 가지 방법을 직접 구현해보았다.
 
-**(1) select_related() 오버라이딩**
+### 쿼리 최적화 - (1) select_related() 오버라이딩
 
 첫번째 방법은 `QuerySet` 내 `select_related()`를 오버라이딩하는 방식으로, 코어 수준의 로직을 재정의하는 과정이 필요하지만 평소 사용하는 `select_related()` 구문을 동일하게 사용할 수 있다는 장점이 있다.
 
@@ -526,7 +531,7 @@ class Book(models.Model):
 
 이때 `Person` 모델에 `common` 데이터베이스에 있는 다른 모델(예를 들어 `Company`)을 향한 `ForeignKey`(예를 들어 `company`)를 추가하였다.
 
-**(2) prefetch_related() 사용**
+### 쿼리 최적화 - (2) prefetch_related() 사용
 
 공식문서에서는 `prefetch_related()`를 N:N 관계나 1:N 관계에서 이용하는 부분에 초점을 맞추고 있지만, 기본 원리를 따르면 N:1이나 1:1 관계에서도 사용할 수가 있다는 것을 알아냈다!
 
@@ -560,7 +565,7 @@ class Book(models.Model):
 
 다시 `O(1)`로 돌아왔다! 조금 복잡하지만, `prefetch_related()`를 사용해서 다중 데이터베이스 접근을 최소화할 수 있는 쿼리를 자유롭게 만들 수 있다.
 
-**(3) select_related()에서 prefetch_related() 사용**
+### 쿼리 최적화 - (3) select_related()에서 prefetch_related() 사용
 
 (1)과 (2) 방식을 혼합하여 (1)의 복잡한 구조 대신 딱 `select_related()`만 오버라이딩할 수도 있다.
 
@@ -605,14 +610,10 @@ class BookQuerySet(models.QuerySet):
 {'default': 1, 'common': 1}
 ```
 
-## 이외의 방법
-
-이외에도 https://code.i-harness.com/en/q/53d1f9 이곳에 나와있는 접근법 역시 존재한다. (테스트를 진행해보진 않았다.)
-
 ## 정리
 
 다중 데이터베이스를 사용할 때 다른 데이터베이스 내 테이블을 향하는 `ForeignKey`를 설정하는 방법과 쿼리셋 최적화 전략을 알아보았다. 물론 두 가지 접근 모두 쿼리셋 내 대부분의 메서드를 자유롭게 사용할 수 없지만 가장 필요하다고 생각되는 `select_related()`를 사용할 수 있도록 커스터마이징을 해보았다.
 
 다중 데이터베이스를 운용한다는 것부터가 쿼리셋을 짤 때 단일 데이터베이스의 단순함을 그대로 사용하겠다는 욕심을 버린다는 걸 전제로 한다. 더군다나 Django가 다중 데이터베이스 간 관계를 지원하지 않기 때문에라도 많은 커스터마이징이 필요할 것이다.
 
-본 포스트를 기반으로 여러분만의 쿼리 커스터마이징을 잘 구현해낼 수 있으면 좋겠다.
+본 포스트를 기반으로 여러분만의 쿼리 커스터마이징을 잘 구현해낼 수 있으면 좋겠다. 또한 **더 나은 방식**이 있다면 댓글 등으로 **공유**해주시길!
