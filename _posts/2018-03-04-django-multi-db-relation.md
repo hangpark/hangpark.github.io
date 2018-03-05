@@ -542,7 +542,7 @@ class Book(models.Model):
 {'default': 1, 'common': 1}
 ```
 
-쿼리 수가 `O(n)`에서 `O(1)`로 획기적으로 줄은 것을 알 수 있다!
+쿼리 수가 $O(n)$에서 $O(1)$로 획기적으로 줄은 것을 알 수 있다!
 
 만약 `Person` 모델에 `common` 데이터베이스에 있는 다른 모델(예를 들어 `Company`)을 향한 `ForeignKey`(예를 들어 `company`)가 존재할 경우 기존 21번에서 3번으로 줄어든다. 3번 중 1번은 기존처럼 두 작가를 얻는 쿼리, 2번은 두 명의 작가에 대한 `company`를 각각 얻는 쿼리이다.
 
@@ -563,7 +563,7 @@ class Book(models.Model):
 {'default': 1, 'common': 1}
 ```
 
-다시 `O(1)`로 돌아왔다! 조금 복잡하지만, `prefetch_related()`를 사용해서 다중 데이터베이스 접근을 최소화할 수 있는 쿼리를 자유롭게 만들 수 있다.
+다시 $O(1)$로 돌아왔다! 조금 복잡하지만, `prefetch_related()`를 사용해서 다중 데이터베이스 접근을 최소화할 수 있는 쿼리를 자유롭게 만들 수 있다.
 
 ### 쿼리 최적화 - (3) select_related()에서 prefetch_related() 사용
 
