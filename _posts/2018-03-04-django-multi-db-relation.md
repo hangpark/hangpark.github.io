@@ -599,6 +599,8 @@ class BookQuerySet(models.QuerySet):
         return obj
 ```
 
+**[위 코드를 리팩토링해 다른 모델에서도 사용할 수 있도록 queryset mixin 형태로 만들어 두었다.](https://github.com/hangpark/django-multi-db-relation)**
+
 마지막 테스트!
 
 ```python
