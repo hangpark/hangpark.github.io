@@ -17,3 +17,47 @@ html {
 details summary p {
   display: inline;
 }
+
+#resume {
+  section {
+    margin-top: 50px;
+  }
+  #tb {
+    margin-top: 10px;
+    hr {
+      width: 50px;
+      margin: 0 auto;
+      border-color: #e7c53e;
+      border-width: 2px 0 0 0;
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
+  .title {
+    background-color: #efebe8;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  .list p, .list .fa {
+    margin: 0;
+    line-height: 35px;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  .small, small {
+    font-size: 80%;
+    font-weight: 400;
+  }
+}
