@@ -19,6 +19,7 @@ details summary p {
 }
 
 #resume {
+  $text-color: #494e52;
   section {
     margin-top: 50px;
   }
@@ -49,6 +50,11 @@ details summary p {
   .lead {
     font-size: 1.25rem;
     font-weight: 300;
+    a, a:visited, a:hover {
+      color: $text-color;
+      text-decoration: none;
+      border-bottom: 2px dotted $text-color;
+    }
   }
   .text-center {
     text-align: center;
