@@ -1,0 +1,12 @@
+layout:
+  follow: '팔로우'
+menus:
+  about: '소개'
+404:
+  title: '존재하지 않는 페이지입니다.'
+  goHome: '메인 페이지로'
+  notTranslated: '본 컨텐츠는 한국어로 아직 번역되지 않았습니다.'
+  suggestTranslations: '다른 언어로는 컨텐츠를 확인하실 수 있습니다.'
+language:
+  en: 'English'
+  ko: '한국어'

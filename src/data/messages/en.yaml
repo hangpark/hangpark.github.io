@@ -1,0 +1,12 @@
+layout:
+  follow: 'Follow'
+menus:
+  about: 'About Me'
+404:
+  title: 'Page not found'
+  notTranslated: 'This content has not been translated in English yet.'
+  goHome: 'Go home'
+  suggestTranslations: 'Still you can read the content in other languages.'
+language:
+  en: 'English'
+  ko: '한국어'

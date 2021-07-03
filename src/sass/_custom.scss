@@ -1,0 +1,97 @@
+@import "src/sass/svg";
+
+html {
+  font-size: 16px;
+
+  @include breakpoint($medium) {
+    font-size: 18px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 18px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px;
+  }
+}
+
+main.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .initial-content {
+    flex: 1;
+
+    .sidebar.sticky {
+      height: auto;
+    }
+  }
+
+  .page__footer {
+    position: relative;
+  }
+}
+
+details summary p {
+  display: inline;
+}
+
+.gatsby-highlight {
+  margin-bottom: 1.2em;
+  font-size: 0.8em;
+  &>pre {
+    border-radius: 10px;
+  }
+}
+
+#resume {
+  $text-color: #494e52;
+  section {
+    margin-top: 50px;
+  }
+  #tb {
+    margin-top: 10px;
+    hr {
+      width: 50px;
+      margin: 0 auto;
+      border-color: #e7c53e;
+      border-width: 2px 0 0 0;
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
+  .title {
+    background-color: #efebe8;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  .list p, .list .fa {
+    margin: 0;
+    line-height: 35px;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    a, a:visited, a:hover {
+      color: $text-color;
+      text-decoration: none;
+      border-bottom: 2px dotted $text-color;
+    }
+  }
+  .text-center {
+    text-align: center;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  .small, small {
+    font-size: 80%;
+    font-weight: 400;
+  }
+}
