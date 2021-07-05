@@ -48,6 +48,7 @@ details summary p {
     line-height: 35px;
   }
   .lead {
+    margin-top: 1.7rem;
     font-size: 1.25rem;
     font-weight: 300;
     a, a:visited, a:hover {
@@ -55,6 +56,28 @@ details summary p {
       text-decoration: none;
       border-bottom: 2px dotted $text-color;
     }
+  }
+  .sublead {
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  .sublead::before {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    content: "";
+    margin-left: 2px;
+    margin-right: 8px;
+  }
+  li {
+    font-size: 0.96rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  li ul li {
+    font-size: 0.87rem;
   }
   .text-center {
     text-align: center;

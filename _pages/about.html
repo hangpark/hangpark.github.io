@@ -9,108 +9,218 @@ permalink: /about/
   </section>
   <section>
     <div class="title col-12">Technical Skills</div>
-    <p><small>★ experienced, ★★ knowledgeable, ★★★ strong</small></p>
+    <p class="lead">Golang <small>★★★</small></p>
+    <ul>
+      <li>gRPC & HTTP/JSON API 서버 구현</li>
+      <li>다양한 내부 컴포넌트 및 비동기 처리 구현</li>
+    </ul>
     <p class="lead">Django <small>★★★</small></p>
     <ul>
-      <li>Django REST Framework, Django Channels, JWT, Jinja2</li>
-      <li>queryset optimization <small>(including overriding default queryset methods and caching)</small>, multi-db managing</li>
-      <li>knowledge about descriptors and metaclasses of python and its applications on Django models</li>
-      <li>available to understand and analyse Django source codes</li>
-    </ul>
-    <p class="lead">Golang <small>★★★</small></p><ul>
-      <li>API Server implementation</li>
+      <li>Django REST Framework</li>
+      <li>Django ORM 최적화</li>
     </ul>
     <p class="lead">Spring Framework <small>★★</small></p>
     <ul>
-      <li>Spring Boot, JPA <small>(Hibernate)</small>, jUnit5</li>
+      <li>Java 8 기반 Spring Boot</li>
+      <li>Netty 기반 reactive 프로그래밍 및 gRPC / RabbitMQ / Redis 연동</li>
     </ul>
-    <p class="lead">Vue.js <small>★★★</small></p>
+    <p class="lead">DB & Queues</p>
     <ul>
-      <li>ES6, Vuex, Webpack customization, grpc-web</li>
+      <li>RDBMS <small>(MySQL InnoDB) ★★</small></li>
+      <li>Redis <small>★★★</small>, DynamoDB <small>★★</small>, Couchbase <small>★</small></li>
+      <li>RabbitMQ <small>★★</small>, Kafka <small>(Kafka Streams) ★</small></li>
     </ul>
-    <p class="lead">DevOps & Etc.</p>
+    <p class="lead">Infra & Architectures</p>
     <ul>
-      <li>Git <small>(git flow, github, GitOps)</small>, Docker, Vim, Nginx, Azure</li>
-      <li>MSA <small>(Kubernetes, Istio, Envoy, gRPC)</small>, AWS, Terraform, Vault, Helm</li>
-      <li>RDBMS, RabbitMQ, DynamoDB, Redis, Couchbase</li>
+      <li>Kubernetes <small>★★ (Helm)</small>, Istio <small>★★★ (Envoy)</small> 기반 서비스 운영</li>
+      <li>AWS <small>★★★</small>, Terraform <small>★★★</small></li>
+    </ul>
+    <p class="lead">Etc.</p>
+    <ul>
+      <li>Vue.js, React 웹앱 개발, React Native 사용 경험</li>
+      <li>DataDog <small>(APM)</small>, Jaeger 기반 시스템 모니터링</li>
+      <li>GitHub Actions, CircleCI, Jenkins 등 CI/CD 적용</li>
+      <li>Git, GitHub, Notion, Jira 등의 도구를 통한 협업</li>
     </ul>
   </section>
   <section>
     <div class="title col-12">Work Experience</div>
-    <p class="lead"><a href="http://www.devsisters.com/" target="_blank">Devsisters Corp.</a> <small>(2018.05 - present)</small></p>
-    <p class="small">SW Engineer in DevPlay cell</p>
+    <p class="lead"><a href="http://www.devsisters.com/" target="_blank" rel="noopener noreferrer">Devsisters
+        Corp.</a> <small>(2018.05 - 현재)</small></p>
+    <p class="small">모바일 게임 플랫폼 <strong>DevPlay</strong> 개발</p>
+    <p class="sublead">플랫폼 API 서버 개발 및 운영 <small>(2018.05 - 현재)</small></p>
+    <p class="small">모바일 게임에 필요한 공통 기능을 기획, 구현 및 개선하는 작업을 메인 업무로 진행하였습니다.
+    본 섹션 아래의 신규 개발 프로젝트들 역시 개발 완료 후 유지보수를 담당하고 있습니다.
+    또한, 서비스 오너십을 갖고 이들 서버 컴포넌트의 인프라 운영과 모니터링을 병행하고 있습니다.</p>
     <ul>
-      <li>Develop DevPlay, a mobile game platform.</li>
+      <li>Golang <small>(AWS EC2)</small> 기반 플랫폼 API 서버 개발 및 유지보수
+        <ul>
+          <li>게임 공통 기능 개발 <small>(멤버십 / 인증 / 인앱결제 / 서드파티 연동 / 공지 / 쿠폰 등)</small></li>
+          <li>게임 운영 기능 개발 <small>(프로덕션, 스테이징, QA, 개발환경 제공 및 라우팅 / 서비스 점검, 업데이트 관리 등)</small></li>
+          <li>MySQL <small>(AWS Aurora)</small> / Redis <small>(AWS ElastiCache)</small></li>
+        </ul>
+      </li>
+      <li>다양한 마이크로 컴포넌트를 K8S <small>(+ Istio)</small> 클러스터 위에서 운영 및 관리</li>
+      <li>Django <small>(AWS EC2)</small> / Vue.js 기반 플랫폼 관리 백오피스 웹서비스 개발 및 유지보수
+        <ul>
+          <li>DRF / MySQL <small>(AWS Aurora)</small> / Redis <small>(AWS ElastiCache)</small></li>
+        </ul>
+      </li>
+      <li>jQuery 기반 인앱 웹뷰 페이지 유지관리</li>
+      <li>쿠키런 킹덤 출시 당시 서비스 장애 대응 및 쿼리 최적화</li>
     </ul>
-    <p class="lead"><a href="https://ancle.kr/" target="_blank">Ancle, Inc.</a> <small>(2017.07 - 2018.05)</small></p>
-    <p class="small">SW Developer in Service Development Dept</p>
+    <p class="sublead">구독형 상품 결제 개발 <small>(2020.09 - 현재)</small></p>
+    <p class="small">플레이스토어 정기결제와 앱스토어 자동 갱신 구독 기능을 플랫폼 도메인 영역에서 통합하여
+      각 게임팀에서 구독형 상품을 유저에게 제공해줄 수 있는 서비스입니다. <i>(개발 마무리 단계, 사업 계획 변동으로 인해 프로덕션 적용 일정이 미뤄졌습니다.)</i>
+    </p>
     <ul>
-      <li>Developed backend of several web sites with Spring framework.</li>
-      <li>Managed relocating operating server to Azure computing instance and introduced Docker based server managing process.</li>
-      <li>Developed in-company HRM system by using Django.</li>
+      <li>플레이스토어/앱스토어 구독 상품 생명주기 인터페이스 통합 관리</li>
+      <li>플레이스토어 구독 이벤트 노티피케이션 연동</li>
+      <li>하기된 태그 시스템과 연동하여 태그 기반 구독 혜택 제공 플로우 정립 <small>(인터널 디테일 encapsulation)</small></li>
+      <li>Golang <small>(k8s)</small> / MySQL <small>(AWS Aurora)</small></li>
     </ul>
-    <p class="lead"><a href="https://biz.talkyou.in/" target="_blank">TalkYou</a> <small>(2017.12 - 2019.07)</small></p>
-    <p class="small">Full-stack developer and service maintainer</p>
+    <p class="sublead">마이쿠키런 Tech PM <small>(2021.06 - 현재)</small></p>
+    <p class="small">쿠키런 IP 기반 게임 경험을 통합하는 신규 서비스 마이쿠키런의 플랫폼 연동을 위한 기술적 제반 사항,
+      개발 설계 방법 조율 등의 작업과 프로젝트 진행에 필요한 리소스 관리를 오너십을 갖고 수행하고 있습니다.
+    </p>
     <ul>
-      <li>Developed RESTful API server by using DRF.</li>
-      <li>Developed web app by using Vue.js.</li>
+      <li>게임이 아닌 서비스의 DevPlay 플랫폼 탑재 전략 고민</li>
+      <li>멤버십 연동 체계를 관리할 수 있는 방안 연구 및 적용</li>
+      <li>서버 / 클라이언트 / QA 등 이슈 의사결정</li>
     </ul>
-    <p class="lead">Startup and Concentrated Programming Camp <small>(2017.06 - 2017.07)</small></p>
-    <p class="small">Participant in which hosted by KAIST and BonAngels, Inc.</p>
+    <p class="sublead">대기열 시스템 설계 및 구축 <small>(2021.03 - 2021.05)</small></p>
+    <p class="small">트래픽 버스트<small>(Traffic Burst)</small>로 인한 서버부하 및 장애를 방지하기 위해
+      유저의 서버 접속 시 순번을 관리하여 허용 인원 만큼을 메인 서버에 입장시켜주는
+      트래픽 셰이핑<small>(Traffic Shaping)</small> 시스템을 설계 및 구축하였습니다.
+      <i>(프로젝트는 완료되었으나, 실제 게임 적용은 대기 중)</i>
+    </p>
+    <ul>
+      <li>유저별 대기토큰을 직접 관리하지 않고 은행 등의 대기표 시스템을 차용하여 내부 상태의 단순화를 추구</li>
+      <li>대기토큰을 발급 받고 순번이 되면 입장토큰으로 교환, 로그인 시 입장토큰 검증</li>
+      <li>Golang <small>(k8s)</small> / Redis <small>(AWS ElastiCache)</small> 기반 경량 컴포넌트</li>
+      <li>스케일아웃이 용이하도록 설계하여 부하테스트 시 도메인 요구사항 상회 트래픽 감당 확인</li>
+    </ul>
+    <p class="sublead">K8S 기반 마이크로 서비스 간 인증 체계 구축 <small>(2020.07 - 2020.10)</small></p>
+    <p class="small">마이크로 서비스 간 서비스 메쉬 내 인증 프랙티스를 정립하고 이에 필요한 서버 및 라이브러리를 개발하였습니다.
+      Helm 라이브러리 차트를 적용하면 인증 관련 로직을 각 어플리케이션에 따로 구현할 필요가 없도록 설계하였습니다.
+    </p>
+    <ul>
+      <li>K8S 클러스터 내 컴포넌트 간 인증은 mTLS 이용</li>
+      <li>서버 - 서버 시크릿 키 기반 인증을 JWT로 변환하는 인증 서버 개발 <small>(Golang)</small>
+        <ul>
+          <li>Envoy <code>ext_authz</code> 필터를 사용한 인증 프록시 처리</li>
+        </ul>
+      </li>
+      <li>사내 기존 OIDC 서버가 발급한 ID 토큰 기반 사원 인증 <small>(Istio Authn)</small></li>
+      <li>gRPC 서비스/메서드 각각에 대한 호출자별 authorization 관리 체계 구축 <small>(Istio Authz)</small></li>
+      <li>Helm 라이브러리 차트 형식으로 상기 사항 모듈화</li>
+      <li>필요 시 커스텀 요청 헤더를 통해 어플리케이션 런타임에서 caller identity 확인 가능 <small>(Lua 스크립트 Envoy 필터)</small></li>
+    </ul>
+    <p class="sublead">유저별 태그 관리 시스템 설계 및 개발 <small>(2020.04 - 2020.08)</small></p>
+    <p class="small">유저에게 문자열 기반 태그를 탈부착할 수 있는 경량 DB 서비스를 설계하고 초기 스펙을 구현하였습니다.
+      인게임 버프 기능 활성화 여부 판단 및 유저 세그멘테이션별 분석 작업 등에 활용됩니다.</p>
+    <ul>
+      <li>유저별 태그 탈부착 API 서버 구현 <small>(Java 8 Spring Boot / MySQL)</small></li>
+      <li>태그 탈부착 시 해당 이벤트를 아래 두 컴포넌트에 전달하기 위해 RabbitMQ 사용</li>
+      <li>유저별 부착 태그 조회 API 서버 구현 <small>(Java 8 Spring Boot <small>(Reactive)</small> / Redis)</small></li>
+      <li>태그 탈부착 이벤트 스토어 구현 <small>(Java 8 Spring Boot / MySQL)</small></li>
+      <li>이벤트 리플레이를 통한 특정 시점의 태그 부착 상태 스냅샷 생성 방안 설계 <small>(미구현 상태)</small></li>
+    </ul>
+    <p class="sublead">조건별 유저 타겟팅 시스템 설계 및 개발 <small>(2020.02 - 2020.04)</small></p>
+    <p class="small">특정 조건에 부합하는 유저를 타겟팅하여 그 목록을 추출해주는 미들웨어 서비스입니다.</p>
+    <ul>
+      <li>다양한 데이터소스<small>(RDBMS, S3 Parquet)</small>를 Spark STS로 연동 <small>(데이터 팀에서 구축)</small></li>
+      <li>Java 8 Spring Boot API 서버가 STS와 JDBC<small>(<code>hive-jdbc</code>)</small>를 통해 조건별 유저 추출</li>
+      <li>조건 사전 등록은 AWS DynamoDB에 저장되며, 추후 유저 추출 시점에 타 컴포넌트가 추출 요청</li>
+      <li>추출된 유저에 대해 특정 태그를 부착할 수도, 유저 목록을 호출 컴포넌트에 전달할 수도 있음</li>
+    </ul>
+    <p class="sublead">대용량 모바일 푸시 메시지 전송 아키텍쳐 설계 및 개발 <small>(2019.10 - 2020.01)</small></p>
+    <p class="small">레거시 푸시 시스템을 새로운 아키텍쳐로 개편하여 대용량 푸시 메시지 전송을 분 단위 내에 완료하기 위한 프로젝트입니다.</p>
+    <ul>
+      <li>예약 발송, 타임존별 발송, 타겟 유저 발송 기능 제공, 게임 서버에 gRPC 기반 발송 API 제공</li>
+      <li>기존 MySQL 메인 DB가 아닌 Couchbase에 유저의 푸시 메시지 관련 정보 관리</li>
+      <li>전처리 컴포넌트의 대상 유저 추출 및 S3 적재 - 발송 컴포넌트의 유저별 데이터 바인딩 및 필터링</li>
+      <li>발송 컴포넌트가 RabbitMQ에 보낸 유저별 발송 페이로드를 여러 워커가 컨슘하여 Firebase를 통해 푸시 발송</li>
+      <li>Java 8 Spring Boot <small>(API, 전처리, 발송 컴포넌트)</small> / Golang <small>(워커 컴포넌트)</small></li>
+    </ul>
+    <p class="sublead">K8S 기반 MSA 및 gRPC 적용 R&D <small>(2019.08 - 2019.12)</small></p>
+    <p class="small">기존 AWS EC2 기반 monolithic 서버 구조에서 복잡한 신규 아키텍쳐를 독립 관리하기 위해
+      k8s 기반의 MSA 전략을 수립하였습니다. 이후의 신규 컴포넌트들은 k8s 클러스터 위에서 본 R&D 결과 프랙티스를 따라 운용되고 있습니다.</p>
+    <ul>
+      <li>gRPC 도입 및 사이드카의 JSON transcoding 처리 프랙티스 정립
+        <ul>
+          <li>gRPC 디자인 가이드 작성 및 배포 <small>(2020.05 - 2020.06)</small></li>
+        </ul>
+      </li>
+      <li>Kubernetes를 통한 service orchestration 전략 도입</li>
+      <li>Istio / Envoy를 사용한 service mesh 관리</li>
+      <li>Helm을 이용한 인프라 스펙 관리</li>
+    </ul>
+    <p class="lead"><a href="https://ancle.kr/" target="_blank" rel="noopener noreferrer">Ancle, Inc.</a>
+      <small>(2017.07 - 2018.05)</small></p>
+    <p class="small">다양한 웹사이트를 수주 제작하는 SI 업체에서 스프링 기반 웹 서버 개발을 담당하였습니다.</p>
+    <ul>
+      <li>Spring Boot를 사용하여 다양한 웹사이트를 제작</li>
+      <li>Azure와 Docker를 도입하고 기존 인하우스 인프라를 이전</li>
+    </ul>
+    <p class="lead"><a href="https://www.madcamp.io/" target="_blank">스타트업과 프로그래밍 몰입 캠프</a> <small>(2017.06 - 2017.07)</small></p>
+    <p class="small">KAIST와 BonAngels에서 주관하는 몰입 캠프<small>(구. MAD Camp)</small>에 참여하여 안드로이드 어플리케이션, Socket.io 기반 웹게임 등을 제작하였습니다.</p>
     <p class="lead">One Two Three, Inc. <small>(2015.07 - 2015.08)</small></p>
-    <p class="small">Internship provided by KAIST CUOP Program <small>(Company-University Cooperation)</small></p>
-  </section>
-  <section>
-    <div class="title col-12">Education</div>
-    <p class="lead"><a href="http://www.kaist.ac.kr/" target="_blank">KAIST</a></p>
-    <p><small>2013 - present, undergraduate</small></p>
-    <p><a href="https://cs.kaist.ac.kr/" target="_blank">School of Computing</a> <small>(Computer Science)</small>,<br/><a href="http://mathsci.kaist.ac.kr/" target="_blank">Dept. of Mathematical Sciences</a> <small>(Double major)</small></p>
-    <p class="lead"><a href="https://ksa.hs.kr/" target="_blank">Korea Science Academy of KAIST</a></p>
-    <p><small>2010 - 2012, highschool</small></p>
+    <p class="small">KAIST CUOP Program <small>(Company-University Cooperation)</small> 일환으로 인턴십을 경험하였습니다. JNI를 통해 OpenCV 기반 안드로이드 어플리케이션을 제작한 바 있습니다.</p>
   </section>
   <section>
     <div class="title col-12">Side Projects</div>
-    <p class="lead">KAIST USC Website <small>(2016.05 - 2018)</small></p>
-    <p class="small">Full-stack developer (excluding web design) @ <a href="https://student.kaist.ac.kr" target="_blank">https://student.kaist.ac.kr</a></p>
+    <p class="lead"><a href="https://univote.co.kr/" target="_blank" rel="noopener noreferrer">Univote</a>
+          <small>(2020.07 - 현재)</small></p>
+    <p class="small">전국 대학 학생회 맞춤형 투표 서비스를 기획/개발/운영하였습니다.</p>
     <ul>
-      <li>Website of KAIST Undergraduate Student Council developed by Django.</li>
-      <li>Ported KAIST SSO implementation of Django to Python3 and applied it.</li>
-      <li>I18n fully supported for international students.</li>
+      <li>Django를 사용하여 투표 웹페이지 및 서버 제작</li>
+      <li>Shamir 키분할 알고리즘과 PGP 모듈을 이용하여 키분할 툴을 Golang으로 제작, 사용자에게 배포</li>
+      <li>선거관리위원 각각의 Keybase 계정을 활용하여 서비스 개발자/운영자도 복호화가 불가능한 보안 시스템 설계</li>
     </ul>
-    <p class="lead">Nationwide Students' Vote Competition on 19th Presidential Election <small>(2017.05)</small></p>
-    <p class="small">Full-stack developer (excluding web design) @ <a href="https://univote.kr" target="_blank">https://univote.kr</a></p>
-    <p class="small">Korean: 제19대 대선 전국 대학생 투표대항전</p>
+    <p class="lead"><a href="https://talkyou.in/" target="_blank" rel="noopener noreferrer">TalkYou</a>
+      <small>(2017.12 - 2019.07)</small></p>
+    <p class="small"><a href="https://www.facebook.com/KaDaejeon/" target="_blank">KAIST 대신 전해드립니다</a> 페이스북 페이지 기반 광고 플랫폼을 위한 웹앱과 서버를 개발 및 운영하였습니다.</p>
     <ul>
-      <li>Proof shot uploading platform which shows voting ranking of each university to encourage students to participate on the 19th Korean presidential election.</li>
-      <li>DRF and Angular2 are used.</li>
-      <li>About 2,600 students participated in total. <small><a href="http://news.joins.com/article/21540856" target="_blank">(http://news.joins.com/article/21540856)</a></small></li>
+      <li>DRF를 이용한 RESTful API 기반 광고 플랫폼 서버 개발</li>
+      <li>Vue.js를 사용하여 광고 플랫폼 웹앱 제작</li>
     </ul>
-    <p class="lead">Open Source Contributions</p>
-    <ul>
-      <li>[Improvement] Webpack Doc <small>(webpack/webpack.js.org)</small></li>
-      <li>[L10N] Webpack Korea <small>(webpack-korea/webpack.js.org)</small></li>
-      <li>[Documentation] Django REST Framework <small>(encode/django-rest-framework)</small></li>
-      <li>[Bugfix] Apache Common Math <small>(apache/commons-math)</small></li>
-      <li>[L10N] Linux Mint Applets <small>(linuxmint/cinnamon-spices-applets)</small></li>
-      <li>[Improvement] KAIST SSOv3 in Django for Python3 <small>(hangpark/DJANGO4KAIST)</small></li>
-    </ul>
-    <p class="lead">Other Projects</p>
-    <p>See <a href="https://github.com/hangpark/" target="_blank">https://github.com/hangpark</a> for more information.</p>
+  </section>
+  <section>
+    <div class="title col-12">Education</div>
+    <div class="pl-3">
+      <p class="lead">KAIST</p>
+      <p><small>2013.02 - 2021.02, 학사</small></p>
+      <p>전산학부 <small>(Computer Science)</small>,<br/>수리과학과 <small>(복수전공)</small></p>
+      <p class="lead">KAIST 부설 한국과학영재학교</p>
+      <p><small>2010.02 - 2013.02, 고등학교 대응 과정</small></p>
+    </div>
   </section>
   <section>
     <div class="title col-12">Languages</div>
     <ul>
-      <li>English - Intermediate</li>
-      <li>Korean - Advanced</li>
+      <li>English - 업무에 지장 없음 <small>(읽기/쓰기)</small></li>
+      <li>한국어 - 모국어</li>
     </ul>
   </section>
   <section>
     <div class="title col-12">Interests</div>
     <ul>
-      <li>Solving social problems with IT technologies</li>
-      <li>Dev talks and discussions</li>
-      <li>Learning good architectures and designs</li>
-      <li>Automation of development process for more efficient work flow</li>
+      <li>IT 기술을 사용한 사회 문제 해결에 관심이 많습니다.</li>
+      <li>개발 관련 대화나 토론을 즐겨합니다.</li>
+      <li>도메인 요구사항에 맞는 아키텍쳐를 설계하고 구현하는 작업에 큰 흥미가 있습니다.</li>
+      <li>팀원과 저 자신의 기술적/팀적 역량 성장을 중요하게 생각합니다.</li>
+      <li>천체 사진을 즐겨 찍습니다.</li>
+    </ul>
+  </section>
+  <section>
+    <div class="title col-12">Extra Info.</div>
+    <ul>
+      <li>산업기능요원 복무 <small>(2017.11 - 2020.09)</small></li>
+      <li>정보처리산업기사 <small>(2017.08 취득)</small></li>
+      <li><small>KAIST 학부 총학생회 부총학생회장 (2016)</small></li>
+      <li><small>KAIST 수리과학과 학생회장 (2015)</small></li>
+      <li><small>KAIST 부설 한국과학영재학교 학생회장 (2012)</small></li>
     </ul>
   </section>
 </div>
